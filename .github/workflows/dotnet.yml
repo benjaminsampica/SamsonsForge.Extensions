@@ -27,5 +27,5 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.5
       if: success() && github.ref == 'refs/heads/main'
       with:
-        PROJECT_FILE_PATH: SamsonsForge.Extensions/SamsonsForge.Extensions.csproj
+        PROJECT_FILE_PATH: SamsonsForge.Extensions/SamsonsForge.Extensions.Configuration.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
