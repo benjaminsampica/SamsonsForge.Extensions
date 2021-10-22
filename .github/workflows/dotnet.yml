@@ -18,7 +18,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 5.0.xs
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -27,5 +27,5 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.5
       if: success() && github.ref == 'refs/heads/main'
       with:
-        PROJECT_FILE_PATH: SamsonsForge.Extensions/SamsonsForge.Extensions.Configuration.csproj
+        PROJECT_FILE_PATH: SamsonsForge.Extensions.Configuration/SamsonsForge.Extensions.Configuration.csproj
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
